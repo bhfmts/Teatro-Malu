@@ -1,0 +1,1107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{759ABD84-EE98-4979-84F7-81909DEF1337}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Teatro.mdiTeatro</StartupObject>
+    <RootNamespace>Teatro</RootNamespace>
+    <AssemblyName>Teatro</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <OptionStrict>Off</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>31ED7FFC7180D532CE1562DD59B3E28C7653C238</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Pantallas_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <PublishUrl>http://localhost/Teatro/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>false</CreateWebPageOnPublish>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Teatro.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Teatro.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Archivos de programa\Microsoft Visual Studio 8\Common7\IDE\System.Data.SqlServerCe.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultar disponibilidad.Designer.vb">
+      <DependentUpon>Consultar disponibilidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar disponibilidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Fecha venta vendedor.Designer.vb">
+      <DependentUpon>Inf Fecha venta vendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Fecha venta vendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf pronóstico de ingresos.Designer.vb">
+      <DependentUpon>Inf pronóstico de ingresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf pronóstico de ingresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informe de reclamos.Designer.vb">
+      <DependentUpon>Informe de reclamos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Informe de reclamos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado de administradores.Designer.vb">
+      <DependentUpon>Listado de administradores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listado de administradores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado de clientes.Designer.vb">
+      <DependentUpon>Listado de clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listado de clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado de productores.Designer.vb">
+      <DependentUpon>Listado de productores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listado de productores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar contraseña.Designer.vb">
+      <DependentUpon>Modificar contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pronóstico de ingresos.Designer.vb">
+      <DependentUpon>Pronóstico de ingresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pronóstico de ingresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ranking ventas grafico.Designer.vb">
+      <DependentUpon>Ranking ventas grafico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ranking ventas grafico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar amplificadores.Designer.vb">
+      <DependentUpon>Registrar amplificadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar amplificadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anular venta.Designer.vb">
+      <DependentUpon>Anular venta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anular venta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar atriles.Designer.vb">
+      <DependentUpon>Registrar atriles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar atriles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar bajos.Designer.vb">
+      <DependentUpon>Registrar bajos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar bajos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar baquetas.Designer.vb">
+      <DependentUpon>Registrar baquetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar baquetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar baterias.Designer.vb">
+      <DependentUpon>Registrar baterias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar baterias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAmplificadores.vb" />
+    <Compile Include="ClassAtriles.vb" />
+    <Compile Include="ClassBajos.vb" />
+    <Compile Include="ClassBaquetas.vb" />
+    <Compile Include="ClassBaterias.vb" />
+    <Compile Include="ClassJornada.vb" />
+    <Compile Include="ClassMesas.vb" />
+    <Compile Include="ClassMicrofonos.vb" />
+    <Compile Include="ClassTeclados.vb" />
+    <Compile Include="ClassUbicaciones.vb" />
+    <Compile Include="ClassEquipos.vb" />
+    <Compile Include="ClassGuitarras.vb" />
+    <Compile Include="Eliminar amplificadores.Designer.vb">
+      <DependentUpon>Eliminar amplificadores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar amplificadores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar atriles.Designer.vb">
+      <DependentUpon>Eliminar atriles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar atriles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar bajos.Designer.vb">
+      <DependentUpon>Eliminar bajos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar bajos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar baquetas.Designer.vb">
+      <DependentUpon>Eliminar baquetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar baquetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar baterías.Designer.vb">
+      <DependentUpon>Eliminar baterías.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar baterías.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar equipos.Designer.vb">
+      <DependentUpon>Eliminar equipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar equipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar guitarras.Designer.vb">
+      <DependentUpon>Eliminar guitarras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar guitarras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar mesas.Designer.vb">
+      <DependentUpon>Eliminar mesas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar mesas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar micrófonos.Designer.vb">
+      <DependentUpon>Eliminar micrófonos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar micrófonos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar teclados.Designer.vb">
+      <DependentUpon>Eliminar teclados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar teclados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar guitarras.Designer.vb">
+      <DependentUpon>Registrar guitarras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar guitarras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Boleta efectivo.Designer.vb">
+      <DependentUpon>Inf Boleta efectivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Boleta efectivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Boleta tarjeta.Designer.vb">
+      <DependentUpon>Inf Boleta tarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Boleta tarjeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAdministrador.vb" />
+    <Compile Include="ClassCliente.vb" />
+    <Compile Include="ClassConexion.vb" />
+    <Compile Include="ClassEntrada.vb" />
+    <Compile Include="ClassEvento.vb" />
+    <Compile Include="ClassPersona.vb" />
+    <Compile Include="ClassProductor.vb" />
+    <Compile Include="ClassVendedor.vb" />
+    <Compile Include="Comisiones.Designer.vb">
+      <DependentUpon>Comisiones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Comisiones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entradas.Designer.vb">
+      <DependentUpon>Entradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Fecha anu.Designer.vb">
+      <DependentUpon>Inf Fecha anu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Fecha anu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Fecha anuvende.Designer.vb">
+      <DependentUpon>Inf Fecha anuvende.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Fecha anuvende.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Fecha venta.Designer.vb">
+      <DependentUpon>Inf Fecha venta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Fecha venta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Ventas anuladas.Designer.vb">
+      <DependentUpon>Inf Ventas anuladas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Ventas anuladas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar mesas.Designer.vb">
+      <DependentUpon>Registrar mesas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar mesas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar microfonos.Designer.vb">
+      <DependentUpon>Registrar microfonos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar microfonos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar ubicaciones.Designer.vb">
+      <DependentUpon>Modificar ubicaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar ubicaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Listado de vendedores.Designer.vb">
+      <DependentUpon>Inf Listado de vendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Listado de vendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar equipos.Designer.vb">
+      <DependentUpon>Registrar equipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar equipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes de ventas.Designer.vb">
+      <DependentUpon>Reportes de ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes de ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Responder reclamo.Designer.vb">
+      <DependentUpon>Responder reclamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Responder reclamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inf Ventas diarias.Designer.vb">
+      <DependentUpon>Inf Ventas diarias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Ventas diarias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar usuario.Designer.vb">
+      <DependentUpon>Eliminar usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar teclados.Designer.vb">
+      <DependentUpon>Registrar teclados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar teclados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta entradas.Designer.vb">
+      <DependentUpon>Venta entradas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Venta entradas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Globales.vb" />
+    <Compile Include="Modificar eventos.Designer.vb">
+      <DependentUpon>Modificar eventos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar eventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar usuario.Designer.vb">
+      <DependentUpon>Modificar usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar usuario.Designer.vb">
+      <DependentUpon>Registrar usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro eventos.Designer.vb">
+      <DependentUpon>Registro eventos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registro eventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeatroDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeatroDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TeatroDataSet6.vb">
+      <DependentUpon>TeatroDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Validaciones.vb" />
+    <Compile Include="Ingreso.Designer.vb">
+      <DependentUpon>Ingreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ingreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestión teatro.Designer.vb">
+      <DependentUpon>Gestión teatro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestión teatro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Inf Ventas vendedor.Designer.vb">
+      <DependentUpon>Inf Ventas vendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inf Ventas vendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorEventoRUNVendedorYFechas.Designer.vb">
+      <DependentUpon>VentasPorEventoRUNVendedorYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorEventoRUNVendedorYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorEventoYFechas.Designer.vb">
+      <DependentUpon>VentasPorEventoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorEventoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorFechas.Designer.vb">
+      <DependentUpon>VentasPorFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoEventoYFechas.Designer.vb">
+      <DependentUpon>VentasPorFormaPagoEventoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoEventoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoRUNVendedorYFechas.Designer.vb">
+      <DependentUpon>VentasPorFormaPagoRUNVendedorYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoRUNVendedorYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoTipoEntradaEventoRUNVendedorYFechas.Designer.vb">
+      <DependentUpon>VentasPorFormaPagoTipoEntradaEventoRUNVendedorYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoTipoEntradaEventoRUNVendedorYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoYFechas.Designer.vb">
+      <DependentUpon>VentasPorFormaPagoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorFormaPagoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorEventoFormaPagoYFechas.Designer.vb">
+      <DependentUpon>VentasPorRUNVendedorEventoFormaPagoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorEventoFormaPagoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorTipoEntradaEventoYFechas.Designer.vb">
+      <DependentUpon>VentasPorRUNVendedorTipoEntradaEventoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorTipoEntradaEventoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorTipoEntradaFormaPagoYFechas.Designer.vb">
+      <DependentUpon>VentasPorRUNVendedorTipoEntradaFormaPagoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorTipoEntradaFormaPagoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorTipoEntradaYFechas.Designer.vb">
+      <DependentUpon>VentasPorRUNVendedorTipoEntradaYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorTipoEntradaYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorYFechas.Designer.vb">
+      <DependentUpon>VentasPorRUNVendedorYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorRUNVendedorYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaEventoYFechas.Designer.vb">
+      <DependentUpon>VentasPorTipoEntradaEventoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaEventoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaFechasYPago.Designer.vb">
+      <DependentUpon>VentasPorTipoEntradaFechasYPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaFechasYPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaFormaPagoEventoYFechas.Designer.vb">
+      <DependentUpon>VentasPorTipoEntradaFormaPagoEventoYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaFormaPagoEventoYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaYFechas.Designer.vb">
+      <DependentUpon>VentasPorTipoEntradaYFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentasPorTipoEntradaYFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Consultar disponibilidad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Consultar disponibilidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafico.rdlc" />
+    <EmbeddedResource Include="Inf Fecha venta vendedor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Fecha venta vendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf pronóstico de ingresos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf pronóstico de ingresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informe de reclamos.rdlc" />
+    <EmbeddedResource Include="Informe de reclamos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Informe de reclamos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado clientes.rdlc" />
+    <EmbeddedResource Include="Listado de administradores.rdlc" />
+    <EmbeddedResource Include="Listado de administradores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Listado de administradores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado de clientes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Listado de clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado de productores.rdlc" />
+    <EmbeddedResource Include="Listado de productores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Listado de productores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar contraseña.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modificar contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pronóstico de ingresos.rdlc" />
+    <EmbeddedResource Include="Pronóstico de ingresos.resx">
+      <DependentUpon>Pronóstico de ingresos.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ranking ventas grafico.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ranking ventas grafico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar amplificadores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar amplificadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anular venta.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Anular venta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar atriles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar atriles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar bajos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar bajos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar baquetas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar baquetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar baterias.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar baterias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar amplificadores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar amplificadores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar atriles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar atriles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar bajos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar bajos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar baquetas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar baquetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar baterías.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar baterías.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar equipos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar equipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar guitarras.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar guitarras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar mesas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar mesas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar micrófonos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar micrófonos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar teclados.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Eliminar teclados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar guitarras.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar guitarras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Boleta efectivo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Boleta efectivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Boleta tarjeta.rdlc" />
+    <EmbeddedResource Include="Inf Boleta tarjeta.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Boleta tarjeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comisiones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Comisiones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Boleta efectivo.rdlc" />
+    <EmbeddedResource Include="Entradas.rdlc" />
+    <EmbeddedResource Include="Entradas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Entradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Fecha anu.rdlc" />
+    <EmbeddedResource Include="Inf Fecha anu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Fecha anu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Fecha anuvende.rdlc" />
+    <EmbeddedResource Include="Inf Fecha anuvende.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Fecha anuvende.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Fecha venta vendedor.rdlc" />
+    <EmbeddedResource Include="Inf Fecha venta.rdlc" />
+    <EmbeddedResource Include="Inf Fecha venta.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Fecha venta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Ventas anuladas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Ventas anuladas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar mesas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar mesas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar microfonos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar microfonos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar ubicaciones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modificar ubicaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Listado de vendedores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Listado de vendedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado vendedores.rdlc" />
+    <EmbeddedResource Include="Registrar equipos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar equipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorTipoEntradaEventoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorRUNVendedorTipoEntradaEventoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorRUNVendedorTipoEntradaEventoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorTipoEntradaFormaPagoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorRUNVendedorTipoEntradaFormaPagoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorRUNVendedorTipoEntradaFormaPagoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorTipoEntradaYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorEventoRUNVendedorYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorEventoRUNVendedorYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorEventoRUNVendedorYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorFormaPagoEventoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorFormaPagoEventoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorFormaPagoEventoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorFormaPagoRUNVendedorYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorFormaPagoRUNVendedorYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorFormaPagoRUNVendedorYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorFormaPagoTipoEntradaEventoRUNVendedorYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorFormaPagoTipoEntradaEventoRUNVendedorYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorFormaPagoTipoEntradaEventoRUNVendedorYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorEventoFormaPagoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorRUNVendedorEventoFormaPagoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorRUNVendedorEventoFormaPagoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorTipoEntradaYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorRUNVendedorTipoEntradaYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorYFechas.rdlc" />
+    <EmbeddedResource Include="Reportes de ventas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Reportes de ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Responder reclamo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Responder reclamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inf Ventas diarias.resx">
+      <DependentUpon>Inf Ventas diarias.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar usuario.resx">
+      <DependentUpon>Eliminar usuario.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar teclados.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar teclados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas vendedor.rdlc" />
+    <EmbeddedResource Include="Inf Ventas vendedor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Inf Ventas vendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasDiarias.rdlc" />
+    <EmbeddedResource Include="Venta entradas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Venta entradas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar eventos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modificar eventos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar usuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modificar usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar usuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registrar usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro eventos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Registro eventos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ingreso.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Ingreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestión teatro.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Gestión teatro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorEventoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorEventoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorEventoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorFormaPagoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorFormaPagoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorFormaPagoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorRUNVendedorYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorRUNVendedorYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorTipoEntradaEventoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorTipoEntradaEventoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorTipoEntradaEventoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorTipoEntradaFechasYPago.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorTipoEntradaFechasYPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorTipoEntradaFormaPagoEventoYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorTipoEntradaFormaPagoEventoYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorTipoEntradaFormaPagoEventoYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorTipoEntradaYFechas.rdlc" />
+    <EmbeddedResource Include="VentasPorTipoEntradaYFechas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VentasPorTipoEntradaYFechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorTipoEntradaFechasYPago.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <SubType>
+      </SubType>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="TeatroDataSet6.xsc">
+      <DependentUpon>TeatroDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TeatroDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TeatroDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TeatroDataSet6.xss">
+      <DependentUpon>TeatroDataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_dollar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5days.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tooloptions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursos-de-guitarra-electrica-y-acustica_6c8d656a_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CREDT03B.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CREDT01K.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CREDT01K1.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoTeatro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcalc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcmmidi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CASHB01C.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_form_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_add.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
